@@ -1,19 +1,26 @@
 package com.appsdeveloperblog.orders_service.service;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import com.appsdeveloperblog.core.dto.Order;
 import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders_service.dao.jpa.entity.OrderEntity;
 import com.appsdeveloperblog.orders_service.dao.jpa.repository.OrderRepository;
+import com.example.core.dto.events.OrderCreatedEvent;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
 
-    public OrderServiceImpl(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
-    }
+    private final KafkaTemplate<String, Object> kafkaTemplate;
+
+    @Value("${orders.events.topic.name}")
+    private String ordersEventsTopicName;
 
     @Override
     public Order placeOrder(Order order) {
@@ -23,6 +30,14 @@ public class OrderServiceImpl implements OrderService {
         entity.setProductQuantity(order.getProductQuantity());
         entity.setStatus(OrderStatus.CREATED);
         orderRepository.save(entity);
+
+        final OrderCreatedEvent orderCreatedEvent = new OrderCreatedEvent(
+                entity.getId(),
+                entity.getCustomerId(),
+                entity.getProductId(),
+                entity.getProductQuantity());
+
+        kafkaTemplate.send(ordersEventsTopicName, orderCreatedEvent);
 
         return new Order(
                 entity.getId(),
