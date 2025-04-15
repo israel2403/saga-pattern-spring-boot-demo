@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.core.dto;
+package com.example.core.dto;
 
 import java.math.BigDecimal;
 import java.util.UUID;

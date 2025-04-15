@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.core.types;
+package com.example.core.types;
 
 public enum OrderStatus {
     CREATED,

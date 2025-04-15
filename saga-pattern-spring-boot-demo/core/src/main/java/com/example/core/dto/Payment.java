@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.core.dto;
+package com.example.core.dto;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -20,7 +20,6 @@ public class Payment {
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
     }
-
 
     public Payment(UUID orderId, UUID productId, BigDecimal productPrice, Integer productQuantity) {
         this.orderId = orderId;
@@ -69,4 +68,3 @@ public class Payment {
         this.productQuantity = productQuantity;
     }
 }
-

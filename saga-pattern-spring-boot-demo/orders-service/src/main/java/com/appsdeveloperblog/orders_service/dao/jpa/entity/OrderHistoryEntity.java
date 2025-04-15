@@ -3,7 +3,7 @@ package com.appsdeveloperblog.orders_service.dao.jpa.entity;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-import com.appsdeveloperblog.core.types.OrderStatus;
+import com.example.core.types.OrderStatus;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

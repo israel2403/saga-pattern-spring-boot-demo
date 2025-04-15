@@ -8,10 +8,10 @@ import java.util.UUID;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
-import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders_service.dao.jpa.entity.OrderHistoryEntity;
 import com.appsdeveloperblog.orders_service.dao.jpa.repository.OrderHistoryRepository;
 import com.appsdeveloperblog.orders_service.dto.OrderHistory;
+import com.example.core.types.OrderStatus;
 
 @Service
 public class OrderHistoryServiceImpl implements OrderHistoryService {

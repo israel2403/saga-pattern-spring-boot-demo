@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.appsdeveloperblog.core.dto.Order;
-import com.appsdeveloperblog.core.types.OrderStatus;
 import com.appsdeveloperblog.orders_service.dao.jpa.entity.OrderEntity;
 import com.appsdeveloperblog.orders_service.dao.jpa.repository.OrderRepository;
+import com.example.core.dto.Order;
 import com.example.core.dto.events.OrderCreatedEvent;
+import com.example.core.types.OrderStatus;
 
 import lombok.RequiredArgsConstructor;
 

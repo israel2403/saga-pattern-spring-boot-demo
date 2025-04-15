@@ -3,7 +3,7 @@ package com.appsdeveloperblog.orders_service.dto;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-import com.appsdeveloperblog.core.types.OrderStatus;
+import com.example.core.types.OrderStatus;
 
 public class OrderHistory {
     private UUID id;

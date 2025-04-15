@@ -1,9 +1,8 @@
-package com.appsdeveloperblog.core.dto;
-
-
-import com.appsdeveloperblog.core.types.OrderStatus;
+package com.example.core.dto;
 
 import java.util.UUID;
+
+import com.example.core.types.OrderStatus;
 
 public class Order {
     private UUID orderId;

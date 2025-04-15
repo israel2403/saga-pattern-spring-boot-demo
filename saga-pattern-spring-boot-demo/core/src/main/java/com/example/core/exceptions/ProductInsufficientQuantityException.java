@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.core.exceptions;
+package com.example.core.exceptions;
 
 import java.util.UUID;
 

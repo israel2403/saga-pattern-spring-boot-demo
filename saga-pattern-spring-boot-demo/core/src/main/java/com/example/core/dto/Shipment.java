@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.core.dto;
+package com.example.core.dto;
 
 import java.util.UUID;
 

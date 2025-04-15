@@ -1,10 +1,10 @@
-package com.appsdeveloperblog.core.dto;
-
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+package com.example.core.dto;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 public class CreditCardProcessRequest {
     @NotNull

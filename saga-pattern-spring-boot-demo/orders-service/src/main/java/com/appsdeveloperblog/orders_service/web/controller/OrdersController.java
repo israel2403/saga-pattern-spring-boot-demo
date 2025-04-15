@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.appsdeveloperblog.core.dto.Order;
 import com.appsdeveloperblog.orders_service.dto.CreateOrderRequest;
 import com.appsdeveloperblog.orders_service.dto.CreateOrderResponse;
 import com.appsdeveloperblog.orders_service.dto.OrderHistoryResponse;
 import com.appsdeveloperblog.orders_service.service.OrderHistoryService;
 import com.appsdeveloperblog.orders_service.service.OrderService;
+import com.example.core.dto.Order;
 
 import jakarta.validation.Valid;
 
