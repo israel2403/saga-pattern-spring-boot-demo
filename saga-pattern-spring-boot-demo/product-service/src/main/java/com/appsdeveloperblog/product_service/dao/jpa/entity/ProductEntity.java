@@ -1,57 +1,59 @@
 package com.appsdeveloperblog.product_service.dao.jpa.entity;
 
-import java.math.BigDecimal;
-import java.util.UUID;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.math.BigDecimal;
+import java.util.UUID;
 
 @Table(name = "products")
 @Entity
 public class ProductEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
-    @Column(name = "quantity")
-    private Integer quantity;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "price")
-    private BigDecimal price;
+  @Id
+  @GeneratedValue(strategy = GenerationType.UUID)
+  private UUID id;
 
-    public String getName() {
-        return name;
-    }
+  @Column(name = "quantity")
+  private Integer quantity;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  @Column(name = "name")
+  private String name;
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+  @Column(name = "price")
+  private BigDecimal price;
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public UUID getId() {
-        return id;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setId(UUID id) {
-        this.id = id;
-    }
+  public BigDecimal getPrice() {
+    return price;
+  }
 
-    public Integer getQuantity() {
-        return quantity;
-    }
+  public void setPrice(BigDecimal price) {
+    this.price = price;
+  }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
+  public UUID getId() {
+    return id;
+  }
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+  public Integer getQuantity() {
+    return quantity;
+  }
+
+  public void setQuantity(Integer quantity) {
+    this.quantity = quantity;
+  }
 }

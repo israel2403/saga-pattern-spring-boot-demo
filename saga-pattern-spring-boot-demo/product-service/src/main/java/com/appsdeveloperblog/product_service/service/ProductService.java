@@ -1,16 +1,15 @@
 package com.appsdeveloperblog.product_service.service;
 
+import com.example.core.dto.Product;
 import java.util.List;
 import java.util.UUID;
 
-import com.example.core.dto.Product;
-
 public interface ProductService {
-    List<Product> findAll();
+  List<Product> findAll();
 
-    Product reserve(Product desiredProduct, UUID orderId);
+  Product reserve(Product desiredProduct, UUID orderId);
 
-    void cancelReservation(Product productToCancel, UUID orderId);
+  void cancelReservation(Product productToCancel, UUID orderId);
 
-    Product save(Product product);
+  Product save(Product product);
 }
