@@ -7,8 +7,10 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
+import com.appsdeveloperblog.orders_service.service.OrderHistoryService;
 import com.example.core.dto.commands.ReservedProductCommand;
 import com.example.core.dto.events.OrderCreatedEvent;
+import com.example.core.types.OrderStatus;
 
 import lombok.RequiredArgsConstructor;
 
@@ -18,6 +20,8 @@ import lombok.RequiredArgsConstructor;
 public class OrderSaga {
 
   private final KafkaTemplate<String, Object> kafkaTemplate;
+
+  private final OrderHistoryService orderHistoryService;
 
   @Value("${products.commands.topic.name}")
   private String productsCommandsTopicName;
@@ -30,5 +34,6 @@ public class OrderSaga {
         orderCreatedEvent.getOrderId());
 
     kafkaTemplate.send(productsCommandsTopicName, reservedProductCommand);
+    orderHistoryService.add(reservedProductCommand.getOrderId(), OrderStatus.CREATED);
   }
 }
