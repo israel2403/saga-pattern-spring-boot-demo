@@ -4,6 +4,11 @@
       "name": "orders.events.topic.name",
       "type": "java.lang.String",
       "description": "A description for 'orders.events.topic.name'"
+    },
+    {
+      "name": "products.commands.topic.name",
+      "type": "java.lang.String",
+      "description": "A description for 'products.commands.topic.name'"
     }
   ]
 }
