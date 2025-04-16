@@ -26,8 +26,8 @@
 	<modules>
 		<module>orders-service</module>
 		<module>core</module>
-		<!-- <module>products-service</module>
-		<module>payments-service</module>
+		<module>product-service</module>
+		<!-- <module>payments-service</module>
 		<module>credit-card-processor-service</module> -->
 	</modules>
 
