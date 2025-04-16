@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.appsdeveloperblog.product_service.service.ProductService;
 import com.example.core.dto.Product;
 import com.example.core.dto.commands.ReservedProductCommand;
+import com.example.core.dto.events.ProductReservationFailedEvent;
 import com.example.core.dto.events.ProductReservedEvent;
 import com.example.core.exceptions.ProductInsufficientQuantityException;
 
@@ -41,11 +42,19 @@ public class ProductCommandsHandler {
           reservedProduct.getId(),
           reservedProduct.getPrice(),
           reservedProduct.getQuantity());
+      this.kafkaTemplate.send(productEventsTopicName, productReservedEvent);
       LOGGER.info("Product reserved: {}", productReservedEvent);
     } catch (ProductInsufficientQuantityException e) {
       LOGGER.error("Error reserving product: {}", e.getMessage());
     } catch (Exception e) {
       LOGGER.error("Error reserving product: {}", e.getMessage());
+      final ProductReservationFailedEvent productReservationFailedEvent = new ProductReservationFailedEvent(
+          reservedProductCommand.getProductId(),
+          reservedProductCommand.getOrderId(),
+          reservedProductCommand.getProductQuantity());
+      this.kafkaTemplate.send(
+          productEventsTopicName, productReservationFailedEvent);
+      LOGGER.info("Product reservation failed: {}", productReservationFailedEvent);
     }
   }
 }
