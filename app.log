@@ -1,0 +1,431 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] saga-pattern-spring-boot-demo                                      [pom]
+[INFO] core                                                               [jar]
+[INFO] orders-service                                                     [jar]
+[INFO] products-service                                                   [jar]
+[INFO] 
+[INFO] --------------< com.huerta:saga-pattern-spring-boot-demo >--------------
+[INFO] Building saga-pattern-spring-boot-demo 0.0.1-SNAPSHOT              [1/4]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ saga-pattern-spring-boot-demo ---
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ saga-pattern-spring-boot-demo ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/saga-pattern-spring-boot-demo/0.0.1-SNAPSHOT/saga-pattern-spring-boot-demo-0.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------------------< com.huerta:core >---------------------------
+[INFO] Building core 0.0.1-SNAPSHOT                                       [2/4]
+[INFO]   from core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ core ---
+[INFO] Deleting /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ core ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ core ---
+[INFO] Changes detected - recompiling the module! :source
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 21 source files with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ core ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ core ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ core ---
+[INFO] Building jar: /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/target/core-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ core ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/core/0.0.1-SNAPSHOT/core-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/target/core-0.0.1-SNAPSHOT.jar to /home/huertaubuntupc/.m2/repository/com/huerta/core/0.0.1-SNAPSHOT/core-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------------< com.huerta:orders-service >----------------------
+[INFO] Building orders-service 0.0.1-SNAPSHOT                             [3/4]
+[INFO]   from orders-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ orders-service ---
+[INFO] Deleting /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ orders-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 15 source files with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 17] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ orders-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.huerta.orders.OrdersApplicationTests
+17:54:57.457 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.huerta.orders.OrdersApplicationTests]: OrdersApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:54:57.516 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.huerta.orders.OrdersApplication for test class com.huerta.orders.OrdersApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-04-23T17:54:57.766-06:00  INFO 157142 --- [orders] [           main] c.huerta.orders.OrdersApplicationTests   : Starting OrdersApplicationTests using Java 21.0.7 with PID 157142 (started by huertaubuntupc in /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service)
+2025-04-23T17:54:57.767-06:00  INFO 157142 --- [orders] [           main] c.huerta.orders.OrdersApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2025-04-23T17:54:58.188-06:00  INFO 157142 --- [orders] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-23T17:54:58.225-06:00  INFO 157142 --- [orders] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2025-04-23T17:54:58.566-06:00  INFO 157142 --- [orders] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-23T17:54:58.693-06:00  INFO 157142 --- [orders] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:658b8615-8b8b-46db-b2ab-8afb8d8e587c user=SA
+2025-04-23T17:54:58.695-06:00  INFO 157142 --- [orders] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-23T17:54:58.723-06:00  INFO 157142 --- [orders] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-23T17:54:58.770-06:00  INFO 157142 --- [orders] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-04-23T17:54:58.790-06:00  INFO 157142 --- [orders] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-23T17:54:58.917-06:00  INFO 157142 --- [orders] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-23T17:54:59.441-06:00  INFO 157142 --- [orders] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-23T17:54:59.459-06:00  INFO 157142 --- [orders] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-23T17:54:59.891-06:00  WARN 157142 --- [orders] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-23T17:55:00.225-06:00  INFO 157142 --- [orders] [           main] c.huerta.orders.OrdersApplicationTests   : Started OrdersApplicationTests in 2.631 seconds (process running for 3.252)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.275 s -- in com.huerta.orders.OrdersApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ orders-service ---
+[INFO] Building jar: /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/target/orders-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ orders-service ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/orders-service/0.0.1-SNAPSHOT/orders-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/target/orders-service-0.0.1-SNAPSHOT.jar to /home/huertaubuntupc/.m2/repository/com/huerta/orders-service/0.0.1-SNAPSHOT/orders-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------------< com.huerta:products-service >---------------------
+[INFO] Building products-service 0.0.1-SNAPSHOT                           [4/4]
+[INFO]   from products-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ products-service ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ products-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ products-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ products-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ products-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 17] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ products-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.huerta.products.ProductsApplicationTests
+17:55:01.508 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.huerta.products.ProductsApplicationTests]: ProductsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:55:01.576 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.huerta.products.ProductsApplication for test class com.huerta.products.ProductsApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-04-23T17:55:01.829-06:00  INFO 157332 --- [products] [           main] c.h.products.ProductsApplicationTests    : Starting ProductsApplicationTests using Java 21.0.7 with PID 157332 (started by huertaubuntupc in /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service)
+2025-04-23T17:55:01.830-06:00  INFO 157332 --- [products] [           main] c.h.products.ProductsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-04-23T17:55:02.237-06:00  INFO 157332 --- [products] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-23T17:55:02.250-06:00  INFO 157332 --- [products] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-04-23T17:55:02.521-06:00  INFO 157332 --- [products] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-23T17:55:02.632-06:00  INFO 157332 --- [products] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:107551a7-d598-4799-92bd-46f56b960818 user=SA
+2025-04-23T17:55:02.634-06:00  INFO 157332 --- [products] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-23T17:55:02.684-06:00  INFO 157332 --- [products] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-23T17:55:02.733-06:00  INFO 157332 --- [products] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-04-23T17:55:02.770-06:00  INFO 157332 --- [products] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-23T17:55:02.944-06:00  INFO 157332 --- [products] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-23T17:55:03.166-06:00  INFO 157332 --- [products] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-23T17:55:03.171-06:00  INFO 157332 --- [products] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-23T17:55:03.287-06:00  WARN 157332 --- [products] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-23T17:55:03.648-06:00  INFO 157332 --- [products] [           main] c.h.products.ProductsApplicationTests    : Started ProductsApplicationTests in 1.99 seconds (process running for 2.587)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.689 s -- in com.huerta.products.ProductsApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ products-service ---
+[INFO] Building jar: /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/target/products-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ products-service ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/products-service/0.0.1-SNAPSHOT/products-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/target/products-service-0.0.1-SNAPSHOT.jar to /home/huertaubuntupc/.m2/repository/com/huerta/products-service/0.0.1-SNAPSHOT/products-service-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for saga-pattern-spring-boot-demo 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] saga-pattern-spring-boot-demo ...................... SUCCESS [  0.164 s]
+[INFO] core ............................................... SUCCESS [  1.715 s]
+[INFO] orders-service ..................................... SUCCESS [  4.540 s]
+[INFO] products-service ................................... SUCCESS [  3.406 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.034 s
+[INFO] Finished at: 2025-04-23T17:55:04-06:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] saga-pattern-spring-boot-demo                                      [pom]
+[INFO] core                                                               [jar]
+[INFO] orders-service                                                     [jar]
+[INFO] products-service                                                   [jar]
+[INFO] 
+[INFO] --------------< com.huerta:saga-pattern-spring-boot-demo >--------------
+[INFO] Building saga-pattern-spring-boot-demo 0.0.1-SNAPSHOT              [1/4]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ saga-pattern-spring-boot-demo ---
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ saga-pattern-spring-boot-demo ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/saga-pattern-spring-boot-demo/0.0.1-SNAPSHOT/saga-pattern-spring-boot-demo-0.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------------------< com.huerta:core >---------------------------
+[INFO] Building core 0.0.1-SNAPSHOT                                       [2/4]
+[INFO]   from core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ core ---
+[INFO] Deleting /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ core ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ core ---
+[INFO] Changes detected - recompiling the module! :source
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 21 source files with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ core ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ core ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ core ---
+[INFO] Building jar: /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/target/core-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ core ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/core/0.0.1-SNAPSHOT/core-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/core/target/core-0.0.1-SNAPSHOT.jar to /home/huertaubuntupc/.m2/repository/com/huerta/core/0.0.1-SNAPSHOT/core-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------------< com.huerta:orders-service >----------------------
+[INFO] Building orders-service 0.0.1-SNAPSHOT                             [3/4]
+[INFO]   from orders-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ orders-service ---
+[INFO] Deleting /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ orders-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 15 source files with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 17] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ orders-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.huerta.orders.OrdersApplicationTests
+18:18:53.560 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.huerta.orders.OrdersApplicationTests]: OrdersApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:18:53.620 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.huerta.orders.OrdersApplication for test class com.huerta.orders.OrdersApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-04-23T18:18:53.885-06:00  INFO 179888 --- [orders] [           main] c.huerta.orders.OrdersApplicationTests   : Starting OrdersApplicationTests using Java 21.0.7 with PID 179888 (started by huertaubuntupc in /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service)
+2025-04-23T18:18:53.886-06:00  INFO 179888 --- [orders] [           main] c.huerta.orders.OrdersApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2025-04-23T18:18:54.273-06:00  INFO 179888 --- [orders] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-23T18:18:54.306-06:00  INFO 179888 --- [orders] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2025-04-23T18:18:54.612-06:00  INFO 179888 --- [orders] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-23T18:18:54.728-06:00  INFO 179888 --- [orders] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:af529818-5f5d-4e6d-aa96-eb244a84e300 user=SA
+2025-04-23T18:18:54.729-06:00  INFO 179888 --- [orders] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-23T18:18:54.771-06:00  INFO 179888 --- [orders] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-23T18:18:54.810-06:00  INFO 179888 --- [orders] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-04-23T18:18:54.831-06:00  INFO 179888 --- [orders] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-23T18:18:54.960-06:00  INFO 179888 --- [orders] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-23T18:18:55.409-06:00  INFO 179888 --- [orders] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-23T18:18:55.426-06:00  INFO 179888 --- [orders] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-23T18:18:55.832-06:00  WARN 179888 --- [orders] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-23T18:18:56.101-06:00  INFO 179888 --- [orders] [           main] c.huerta.orders.OrdersApplicationTests   : Started OrdersApplicationTests in 2.391 seconds (process running for 3.054)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.988 s -- in com.huerta.orders.OrdersApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ orders-service ---
+[INFO] Building jar: /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/target/orders-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ orders-service ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/orders-service/0.0.1-SNAPSHOT/orders-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/orders-service/target/orders-service-0.0.1-SNAPSHOT.jar to /home/huertaubuntupc/.m2/repository/com/huerta/orders-service/0.0.1-SNAPSHOT/orders-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------------< com.huerta:products-service >---------------------
+[INFO] Building products-service 0.0.1-SNAPSHOT                           [4/4]
+[INFO]   from products-service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ products-service ---
+[INFO] Deleting /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ products-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ products-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 17] to target/classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ products-service ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ products-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file with javac [debug target 17] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ products-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.huerta.products.ProductsApplicationTests
+18:18:57.261 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.huerta.products.ProductsApplicationTests]: ProductsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:18:57.313 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.huerta.products.ProductsApplication for test class com.huerta.products.ProductsApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2025-04-23T18:18:57.528-06:00  INFO 180061 --- [products] [           main] c.h.products.ProductsApplicationTests    : Starting ProductsApplicationTests using Java 21.0.7 with PID 180061 (started by huertaubuntupc in /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service)
+2025-04-23T18:18:57.528-06:00  INFO 180061 --- [products] [           main] c.h.products.ProductsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-04-23T18:18:57.871-06:00  INFO 180061 --- [products] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-23T18:18:57.883-06:00  INFO 180061 --- [products] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-04-23T18:18:58.162-06:00  INFO 180061 --- [products] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-23T18:18:58.265-06:00  INFO 180061 --- [products] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ad93ee68-f2dd-46cf-99b8-c79a23a86dad user=SA
+2025-04-23T18:18:58.273-06:00  INFO 180061 --- [products] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-23T18:18:58.309-06:00  INFO 180061 --- [products] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-23T18:18:58.338-06:00  INFO 180061 --- [products] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-04-23T18:18:58.357-06:00  INFO 180061 --- [products] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-23T18:18:58.472-06:00  INFO 180061 --- [products] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-23T18:18:58.710-06:00  INFO 180061 --- [products] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-23T18:18:58.713-06:00  INFO 180061 --- [products] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-23T18:18:58.845-06:00  WARN 180061 --- [products] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-23T18:18:59.156-06:00  INFO 180061 --- [products] [           main] c.h.products.ProductsApplicationTests    : Started ProductsApplicationTests in 1.769 seconds (process running for 2.307)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.401 s -- in com.huerta.products.ProductsApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ products-service ---
+[INFO] Building jar: /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/target/products-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.2:install (default-install) @ products-service ---
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/pom.xml to /home/huertaubuntupc/.m2/repository/com/huerta/products-service/0.0.1-SNAPSHOT/products-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing /home/huertaubuntupc/projects/spring/kafka/saga-pattern/practice-3/saga-pattern-spring-boot-demo/products-service/target/products-service-0.0.1-SNAPSHOT.jar to /home/huertaubuntupc/.m2/repository/com/huerta/products-service/0.0.1-SNAPSHOT/products-service-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for saga-pattern-spring-boot-demo 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] saga-pattern-spring-boot-demo ...................... SUCCESS [  0.173 s]
+[INFO] core ............................................... SUCCESS [  1.849 s]
+[INFO] orders-service ..................................... SUCCESS [  4.127 s]
+[INFO] products-service ................................... SUCCESS [  3.114 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.464 s
+[INFO] Finished at: 2025-04-23T18:18:59-06:00
+[INFO] ------------------------------------------------------------------------

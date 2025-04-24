@@ -1,11 +1,13 @@
-package com.huerta.orders;
+package com.huerta.payments;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OrdersApplicationTests {
+class PaymentsApplicationTests {
 
-  @Test
-  void contextLoads() {}
+	@Test
+	void contextLoads() {
+	}
+
 }

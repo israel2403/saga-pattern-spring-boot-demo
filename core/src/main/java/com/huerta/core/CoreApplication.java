@@ -1,12 +1,12 @@
-package com.huerta.orders;
+package com.huerta.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OrdersApplication {
+public class CoreApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(OrdersApplication.class, args);
+    SpringApplication.run(CoreApplication.class, args);
   }
 }
